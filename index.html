@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Gio's personal page - showcasing projects, thoughts, and experiences." />
+
+  <title>Gio's Personal Page</title>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #070b14;
+      --card-soft: #0b1120;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #a7f070;
+      --accent-soft: rgba(34, 211, 238, 0.12);
+      --border: rgba(148, 163, 184, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.10), transparent 28rem),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.08), transparent 30rem),
+        linear-gradient(180deg, #020617 0%, #030712 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+
+    .stuff {
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      margin: 8px 0 16px;
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .info {
+      max-width: 800x;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .info strong {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(11, 17, 32, 0.94), rgba(7, 11, 20, 0.94));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.1rem;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      transform: translateY(-2px);
+      background: var(--accent-soft);
+      border-color: rgba(34, 211, 238, 0.38);
+      outline: none;
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .resume-wrapper {
+      margin-top: 40px;
+    }
+
+    .resume-wrapper h2.section-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .resume-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .resume-item strong {
+      color: var(--text);
+    }
+
+    .resume-item .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .resume-item .meta strong {
+      color: var(--accent);
+    }
+
+    .resume-item p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 36px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="stuff">
+      <div class="about">
+          <img src="logo.png" alt="Giovanni's Logo" class="logo" />
+        Personal page
+      </div>
+      <h1>Giovanni R</h1>
+
+      <p class="info">I'm a BSc Information Technology student with interests in <strong>OSINT</strong> and <strong>Cybersecurity</strong>. I'm especially interested in pursuing OSINT because I enjoy investigating things and the technical aspect, particularly learning how different tools work and experimenting with different ways to use them. I also like to build things such as and drones etc.</p>
+      <p class="info">Outside of tech, there are many things I can mention. I like doing calisthenics, I recently started drawing pixel art und ich lerne Deutsch.</p>
+    </section>
+
+    <section class="grid" aria-label="Links">
+      <div class="card">
+        <h2>Socials</h2>
+
+        <ul class="links">
+          <li>
+            <a href="https://github.com/vvanni" rel="github" target="_blank">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"/>
+              </svg>
+              GitHub
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:gioromany@proton.me">
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" stroke="currentColor" stroke-width="0.5" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+              </svg>
+              Email: gioromany@proton.me
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Projects</h2>
+        <ul class="links">
+          <li>
+            <a href="https://github.com/vvanni/RESEARCHxOSINT" target="_blank" rel="noopener">
+              ResearchDorker
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/vvanni/BSSID-to-location" target="_blank" rel="noopener">
+              BSSID-to-location
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="resume-wrapper" aria-label="Resume">
+      <h2 class="section-title">Resume</h2>
+      
+      <div class="grid">
+        <div class="card">
+          <h2>Education</h2>
+          <div class="links">
+            <div class="resume-item">
+              <strong>BSC in Information Technology</strong>
+              <span class="meta">COSTAATT(College of Science, Technology and Applied Arts of Trinidad and Tobago) • <strong>Ongoing</strong></span>
+            </div>
+            <div class="resume-item">
+              <strong>AS in Information Technology</strong>
+              <span class="meta">COSTAATT(College of Science, Technology and Applied Arts of Trinidad and Tobago) • <strong>2025</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Certifications</h2>
+          <div class="links">
+            <div class="resume-item">
+              <strong>Open-Source Intelligence</strong>
+              <span class="meta">Basel Institute on Governance • <strong>2026</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 20px;">
+        <h2>Work Experience</h2>
+        <div class="links">
+          <div class="resume-item">
+            <strong>Database Admin</strong>
+            <span class="meta"> Paramin Fresh • 2024 - <strong>Present</strong></span>
+            <p>At this position, I design, implement, and maintain databases to support business operations. I also conduct market research and analyze demand for crops to assist with business planning and decision making.</p>
+          </div>
+          <div class="resume-item">
+            <strong>Stall Attendant</strong>
+            <span class="meta"> Boisson's Belly • 2022 - 2023</span>
+            <p>At this positiion, I made sales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Giovanni R
+    </footer>
+  </main>
+</body>
+</html>
